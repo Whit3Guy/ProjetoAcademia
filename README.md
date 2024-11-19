@@ -20,39 +20,6 @@ Para rodar a aplicação em containers Docker, siga os seguintes passos:
 
 1. **Criar e rodar os containers Docker**:
 
-   Para rodar a aplicação com Docker, basta construir e iniciar os containers utilizando o Docker Compose. Crie o arquivo `docker-compose.yml` no diretório raiz do seu projeto:
-
-```yaml
-version: '3.8'
-
-services:
-  web:
-    image: academiasystem:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    volumes:
-      - .:/app
-    depends_on:
-      - db
-
-  db:
-    image: nouchka/sqlite
-    container_name: sqlite
-    volumes:
-      - academia_db:/data/db
-
-volumes:
-  academia_db:
-    driver: local
-```
-
-2. **Comandos Docker**:
-
    Para construir e rodar os containers, execute os seguintes comandos no terminal:
 
    ```bash

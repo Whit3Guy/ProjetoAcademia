@@ -23,8 +23,8 @@ Para rodar a aplicação em containers Docker, siga os seguintes passos:
    Para construir e rodar os containers, execute os seguintes comandos no terminal:
 
    
-   docker-compose build
-   docker-compose up
+   docker build -t academiasystem .
+   docker run -d -p 8080:8080 --name academiasystem academiasystem
    ```
 
    O primeiro comando irá compilar a imagem da aplicação. O segundo comando irá subir os containers da aplicação e do banco de dados SQLite.

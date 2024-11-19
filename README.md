@@ -22,7 +22,7 @@ Para rodar a aplicação em containers Docker, siga os seguintes passos:
 
    Para construir e rodar os containers, execute os seguintes comandos no terminal:
 
-   ```bash
+   
    docker-compose build
    docker-compose up
    ```
